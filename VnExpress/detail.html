@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <link rel="stylesheet" href="./assets/css/main.css">
+        <link rel="stylesheet" href="./assets/css/style.css">
+        <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.1.2/css/all.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <title>VnExpress</title>
+    </head>
+    <body>
+        <div class="row header-top">
+            <div class="col-md-12 container" style=" max-width: 1200px;">
+                <button class="bar" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <div class="row col-sm-5 navbar__logo">
+                    <a href="#"><img class="logo" src="./assets/images/logo.svg"></a>
+                    <div class="time-now">Thứ hai, 15/8/2022</div>
+                </div>
+                <div class="row col-md-6 right">
+                    <a href="#" class="btn24hqua">Mới nhất</a>
+                    <a href="#" class="thegioi">International</a>
+                <form  action="" class="search">
+                    <input id="keywordHeader" type="text" name="q" placeholder="Tìm kiếm">
+                    <button class="btn-search-vne" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>                    
+                </form>
+                <a class=" login" onclick="document.getElementById('modal-wrapper').style.display='block'"><i style="color: gray;font-size: 14px;" class="fa-solid fa-user"></i> &ensp;Đăng nhập</a>
+                   
+                </div>
+            </div> 
+            <div class="modal" id="modal-wrapper">
+                <form action="/action_page.php" class="modal-content animate">
+                    <div class="imgcontainer">
+                        <span class="close" title="close popup" onclick="document.getElementById('modal-wrapper').style.display='none'">&timesb;</span>
+                        <img src="./assets/images/avatar-login.png" alt="avatar" class="avatar">
+                        <h1 style="text-align:center">Login User</h1>
+                    </div>
+                    <div class="container-login">
+                        <input type="text" placeholder="Nhập UserName" name="user">
+                        <input type="password" placeholder="Nhập password" name="pass">
+                        <button type="submit">Đăng nhập</button>
+                        <button type="submit">Đăng ký</button>
+                        <input type="checkbox" style="margin: 26px 30px;">Nhớ mật khẩu
+                        <a href="#" style="text-decoration:none;float:right;margin-right:34px; margin-top:26px;">Quên mật khẩu</a>
+                    </div>
+                </form>
+            </div>
+            <div class="collapse" id="collapseExample">
+                <div class="collapse-content">
+                    <div class="row col-md-12 all-category">
+                        <div class="col-md-11"><p>Tất cả chuyên mục</p></div>
+                        <div class="col-md-1"><a href="#" data-toggle="collapse" data-target="#collapseExample"><i class="fa-solid fa-xmark"></i></a></div>
+                    </div>
+                    <div class="row col-md-12">
+                        <div class="col-md-10 list-item-left">
+                            <div class="row col-md-12 list-icon">
+                                <div class="col-md-2 ">
+                                    <ul>
+                                        <li><a style="font-weight: 700;" href="#">Thời sự</a></li>
+                                        <li><a href="#">Chính trị</a></li>
+                                        <li><a href="#">Dân sinh</a></li>
+                                        <li><a href="#">Lao động-Việc làm</a></li>
+                                        <li><a href="#">Giao thông</a></li>
+                                        <li><a class="readmore" href="#">Đọc thêm</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-2">
+                                    <ul>
+                                        <li><a style="font-weight: 700;" href="#">Góc nhìn</a></li>
+                                        <li><a href="#">Bình luận nhiều</a></li>
+                                        <li><a href="#">Chính trị</a></li>
+                                        <li><a href="#">Y tế & SK</a></li>
+                                        <li><a href="#">Kinh doanh & quản trị</a></li>
+                                        <li><a class="readmore" href="#">Đọc thêm</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-2">
+                                    <ul>
+                                        <li><a style="font-weight: 700;" href="#">Thế giới</a></li>
+                                        <li><a href="#">Tư liệu</a></li>
+                                        <li><a href="#">Phân tích</a></li>
+                                        <li><a href="#">Người Việt 5 châu</a></li>
+                                        <li><a href="#">Cuộc sống đó đây</a></li>
+                                        <li><a class="readmore" href="#">Đọc thêm</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-2">
+                                    <ul>
+                                        <li><a style="font-weight: 700;" href="#">Videos</a></li>
+                                        <li><a href="#">Thời sự</a></li>
+                                        <li><a href="#">Nhịp sống</a></li>
+                                        <li><a href="#">Food</a></li>
+                                        <li><a href="#">Tôi kể</a></li>
+                                        <li><a class="readmore" href="#">Đọc thêm</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-2">
+                                    <ul>
+                                        <li><a style="font-weight: 700;" href="#">Podcasts</a></li>
+                                        <li><a href="#">VnExpress hn</a></li>
+                                        <li><a href="#">Họ nói gì?</a></li>
+                                        <li><a href="#">Hộp đen</a></li>
+                                        <li><a href="#">Ly hôn</a></li>
+                                        <li><a class="readmore" href="#">Đọc thêm</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-2">
+                                    <ul>
+                                        <li><a style="font-weight: 700;" href="#">Podcasts</a></li>
+                                        <li><a href="#">VnExpress hn</a></li>
+                                        <li><a href="#">Họ nói gì?</a></li>
+                                        <li><a href="#">Hộp đen</a></li>
+                                        <li><a href="#">Ly hôn</a></li>
+                                        <li><a class="readmore" href="#">Đọc thêm</a></li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                            <div class="row col-md-12 list-icon">
+                                <div class="col-md-2 ">
+                                    <ul>
+                                        <li><a style="font-weight: 700;" href="#">Thời sự</a></li>
+                                        <li><a href="#">Chính trị</a></li>
+                                        <li><a href="#">Dân sinh</a></li>
+                                        <li><a href="#">Lao động-Việc làm</a></li>
+                                        <li><a href="#">Giao thông</a></li>
+                                        <li><a class="readmore" href="#">Đọc thêm</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-2">
+                                    <ul>
+                                        <li><a style="font-weight: 700;" href="#">Góc nhìn</a></li>
+                                        <li><a href="#">Bình luận nhiều</a></li>
+                                        <li><a href="#">Chính trị</a></li>
+                                        <li><a href="#">Y tế & SK</a></li>
+                                        <li><a href="#">Kinh doanh & quản trị</a></li>
+                                        <li><a class="readmore" href="#">Đọc thêm</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-2">
+                                    <ul>
+                                        <li><a style="font-weight: 700;" href="#">Thế giới</a></li>
+                                        <li><a href="#">Tư liệu</a></li>
+                                        <li><a href="#">Phân tích</a></li>
+                                        <li><a href="#">Người Việt 5 châu</a></li>
+                                        <li><a href="#">Cuộc sống đó đây</a></li>
+                                        <li><a class="readmore" href="#">Đọc thêm</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-2">
+                                    <ul>
+                                        <li><a style="font-weight: 700;" href="#">Videos</a></li>
+                                        <li><a href="#">Thời sự</a></li>
+                                        <li><a href="#">Nhịp sống</a></li>
+                                        <li><a href="#">Food</a></li>
+                                        <li><a href="#">Tôi kể</a></li>
+                                        <li><a class="readmore" href="#">Đọc thêm</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-2">
+                                    <ul>
+                                        <li><a style="font-weight: 700;" href="#">Podcasts</a></li>
+                                        <li><a href="#">VnExpress hn</a></li>
+                                        <li><a href="#">Họ nói gì?</a></li>
+                                        <li><a href="#">Hộp đen</a></li>
+                                        <li><a href="#">Ly hôn</a></li>
+                                        <li><a class="readmore" href="#">Đọc thêm</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-2">
+                                    <ul>
+                                        <li><a style="font-weight: 700;" href="#">Podcasts</a></li>
+                                        <li><a href="#">VnExpress hn</a></li>
+                                        <li><a href="#">Họ nói gì?</a></li>
+                                        <li><a href="#">Hộp đen</a></li>
+                                        <li><a href="#">Ly hôn</a></li>
+                                        <li><a class="readmore" href="#">Đọc thêm</a></li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                            <div class="row col-md-12 list-icon">
+                                <div class="col-md-2 ">
+                                    <ul>
+                                        <li><a style="font-weight: 700;" href="#">Kinh doanh</a></li>
+                                        <li><a href="#">Comedy 1.2</a></li>
+                                        <li><a href="#">Comedy 1.3</a></li>
+                                        <li><a href="#">Comedy 1.4</a></li>
+                                        <li><a href="#">Comedy 1.5</a></li>
+                                        <li><a class="readmore" href="#">Đọc thêm</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-2">
+                                    <ul>
+                                        <li><a style="font-weight: 700;" href="#">Thể thao</a></li>
+                                        <li><a href="#">Comedy 1.2</a></li>
+                                        <li><a href="#">Comedy 1.3</a></li>
+                                        <li><a href="#">Comedy 1.4</a></li>
+                                        <li><a href="#">Comedy 1.5</a></li>
+                                        <li><a class="readmore" href="#">Đọc thêm</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-2">
+                                    <ul>
+                                        <li><a style="font-weight: 700;" href="#">Pháp luật</a></li>
+                                        <li><a href="#">Comedy 1.2</a></li>
+                                        <li><a href="#">Comedy 1.3</a></li>
+                                        <li><a href="#">Comedy 1.4</a></li>
+                                        <li><a href="#">Comedy 1.5</a></li>
+                                        <li><a class="readmore" href="#">Đọc thêm</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-2">
+                                    <ul>
+                                        <li><a style="font-weight: 700;" href="#">Giáo dục</a></li>
+                                        <li><a href="#">Comedy 1.2</a></li>
+                                        <li><a href="#">Comedy 1.3</a></li>
+                                        <li><a href="#">Comedy 1.4</a></li>
+                                        <li><a href="#">Comedy 1.5</a></li>
+                                        <li><a class="readmore" href="#">Đọc thêm</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-2">
+                                    <ul>
+                                        <li><a style="font-weight: 700;" href="#">Sức khỏe</a></li>
+                                        <li><a href="#">Comedy 1.2</a></li>
+                                        <li><a href="#">Comedy 1.3</a></li>
+                                        <li><a href="#">Comedy 1.4</a></li>
+                                        <li><a href="#">Comedy 1.5</a></li>
+                                        <li><a class="readmore" href="#">Đọc thêm</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 list-item-right">
+                            <ul>
+                                <li><a style="font-weight: 700;" href="#">Podcasts</a></li>
+                                <li><a style="font-weight: 700;" href="#">Ảnh</a></li>
+                                <li><a style="font-weight: 700;" href="#">Infographics</a></li>
+                            </ul>
+                            <ul>
+                                <li><a style="font-weight: 700;" href="#">Mới nhất</a></li>
+                                <li><a style="font-weight: 700;" href="#">Xem nhiều</a></li>
+                                <li><a style="font-weight: 700;" href="#">Tin nóng</a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="#">Giao vặt</a></li>
+                                <li><a href="#">Start up</a></li>
+                                <li><a href="#">Mua ảnh Express</a></li>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">Ebook</a></li>
+                                <li><a href="#">Ework</a></li>
+                            </ul>
+                            <ul>
+                                <li>Liên hệ</li>
+                                <li><a href="#"><i class="fa-solid fa-envelope"></i> Tòa soạn</a></li>
+                                <li><a href="#"><i class="fa-brands fa-edge-legacy"></i> Quảng cáo</a></li>
+                                <li><a href="#"><i class="fa-solid fa-v"></i> Hợp tác bản quyền</a></li>
+                            </ul>
+                            <ul class="dowloadapp">
+                                <li>Tải ứng dụng</li>
+                                <li><a href="#"><i class="fa-brands fa-edge"></i> VN Express</a></li>
+                                <li><a href="#"><i class="fa-brands fa-edge"></i> International</a></li>
+                            </ul> 
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <header>
+            <section class="main-menu">
+                <nav>
+                    <ul class="navbar_links">
+                        <li class="navbar_link"><a href="#"><i class="fa-solid fa-house"></i></a></li>
+                        <li class="navbar_link"><a href="#">News</a>
+                            <ul class="sub-menu">
+                                <li><a href="#">News 1.1</a></li>
+                                <li><a href="#">News 1.2</a></li>
+                                <li><a href="#">News 1.3</a></li>
+                                <li><a href="#">News 1.4</a></li>
+                                <li><a href="#">News 1.5</a></li>
+                            </ul>
+                        </li>
+                        <li class="navbar_link"><a href="#">View</a>
+                            <ul class="sub-menu">
+                                <li><a href="#">View 1.1</a></li>
+                                <li><a href="#">View 1.2</a></li>
+                                <li><a href="#">View 1.3</a></li>
+                                <li><a href="#">View 1.4</a></li>
+                                <li><a href="#">View 1.5</a></li>
+                            </ul>
+                        </li>
+                        <li class="navbar_link"><a href="#">World</a>
+                            <ul class="sub-menu">
+                                <li><a href="#">World 1.1</a></li>
+                                <li><a href="#">World 1.2</a></li>
+                                <li><a href="#">World 1.3</a></li>
+                                <li><a href="#">World 1.4</a></li>
+                                <li><a href="#">World 1.5</a></li>
+                            </ul>
+                        </li>
+                        <li class="navbar_link"><a href="#">Videos</a>
+                            <ul class="sub-menu">
+                                <li><a href="#">Videos 1.1</a></li>
+                                <li><a href="#">Videos 1.2</a></li>
+                                <li><a href="#">Videos 1.3</a></li>
+                                <li><a href="#">Videos 1.4</a></li>
+                                <li><a href="#">Videos 1.5</a></li>
+                            </ul>
+                        </li>
+                        <li class="navbar_link"><a href="#">Prodcasts</a>
+                            <ul class="sub-menu">
+                                <li><a href="#">Prodcasts 1.1</a></li>
+                                <li><a href="#">Prodcasts 1.2</a></li>
+                                <li><a href="#">Prodcasts 1.3</a></li>
+                                <li><a href="#">Prodcasts 1.4</a></li>
+                                <li><a href="#">Prodcasts 1.5</a></li>
+                            </ul>
+                        </li>
+                        <li class="navbar_link"><a href="#">Business</a>
+                            <ul class="sub-menu">
+                                <li><a href="#">Business 1.1</a></li>
+                                <li><a href="#">Business 1.2</a></li>
+                                <li><a href="#">Business 1.3</a></li>
+                                <li><a href="#">Business 1.4</a></li>
+                                <li><a href="#">Business 1.5</a></li>
+                            </ul>
+                        </li>
+                        <li class="navbar_link"><a href="#">Science</a>
+                            <ul class="sub-menu">
+                                <li><a href="#">Science 1.1</a></li>
+                                <li><a href="#">Science 1.2</a></li>
+                                <li><a href="#">Science 1.3</a></li>
+                                <li><a href="#">Science 1.4</a></li>
+                                <li><a href="#">Science 1.5</a></li>
+                            </ul>
+                        </li>
+                        <li class="navbar_link"><a href="#">Entertainment</a>
+                            <ul class="sub-menu">
+                                <li><a href="#">Entertainment 1.1</a></li>
+                                <li><a href="#">Entertainment 1.2</a></li>
+                                <li><a href="#">Entertainment 1.3</a></li>
+                                <li><a href="#">Entertainment 1.4</a></li>
+                                <li><a href="#">Entertainment 1.5</a></li>
+                            </ul>
+                        </li>
+                        <li class="navbar_link"><a href="#">Sport</a>
+                            <ul class="sub-menu">
+                                <li><a href="#">Sport 1.1</a></li>
+                                <li><a href="#">Sport 1.2</a></li>
+                                <li><a href="#">Sport 1.3</a></li>
+                                <li><a href="#">Sport 1.4</a></li>
+                                <li><a href="#">Sport 1.5</a></li>
+                            </ul>
+                        </li>
+                        <li class="navbar_link"><a href="#">Law</a>
+                            <ul class="sub-menu">
+                                <li><a href="#">Law 1.1</a></li>
+                                <li><a href="#">Law 1.2</a></li>
+                                <li><a href="#">Law 1.3</a></li>
+                                <li><a href="#">Law 1.4</a></li>
+                                <li><a href="#">Law 1.5</a></li>
+                            </ul>
+                        </li>
+                        <li class="navbar_link"><a href="#">Education</a>
+                            <ul class="sub-menu">
+                                <li><a href="#">Education 1.1</a></li>
+                                <li><a href="#">Education 1.2</a></li>
+                                <li><a href="#">Education 1.3</a></li>
+                                <li><a href="#">Education 1.4</a></li>
+                                <li><a href="#">Education 1.5</a></li>
+                            </ul>
+                        </li>
+                        <li class="navbar_link"><a href="#">Health</a>
+                            <ul class="sub-menu">
+                                <li><a href="#">Health 1.1</a></li>
+                                <li><a href="#">Health 1.2</a></li>
+                                <li><a href="#">Health 1.3</a></li>
+                                <li><a href="#">Health 1.4</a></li>
+                                <li><a href="#">Health 1.5</a></li>
+                            </ul>
+                        </li>
+                        <li class="navbar_link"><a href="#">Life</a>
+                            <ul class="sub-menu">
+                                <li><a href="#">Life 1.1</a></li>
+                                <li><a href="#">Life 1.2</a></li>
+                                <li><a href="#">Life 1.3</a></li>
+                                <li><a href="#">Life 1.4</a></li>
+                                <li><a href="#">Life 1.5</a></li>
+                            </ul>
+                        </li>
+                        <li class="navbar_link"><a href="#">Travel</a>
+                            <ul class="sub-menu">
+                                <li><a href="#">Travel 1.1</a></li>
+                                <li><a href="#">Travel 1.2</a></li>
+                                <li><a href="#">Travel 1.3</a></li>
+                                <li><a href="#">Travel 1.4</a></li>
+                                <li><a href="#">Travel 1.5</a></li>
+                            </ul>
+                        </li>
+                        <li class="navbar_link"><a href="#">Digitizing</a>
+                            <ul class="sub-menu">
+                                <li><a href="#">Digitizing 1.1</a></li>
+                                <li><a href="#">Digitizing 1.2</a></li>
+                                <li><a href="#">Digitizing 1.3</a></li>
+                                <li><a href="#">Digitizing 1.4</a></li>
+                                <li><a href="#">Digitizing 1.5</a></li>
+                            </ul>
+                        </li>
+                        <li class="navbar_link"><a href="#">Car</a>
+                            <ul class="sub-menu">
+                                <li><a href="#">Car 1.1</a></li>
+                                <li><a href="#">Car 1.2</a></li>
+                                <li><a href="#">Car 1.3</a></li>
+                                <li><a href="#">Car 1.4</a></li>
+                                <li><a href="#">Car 1.5</a></li>
+                            </ul>
+                        </li>
+                        <li class="navbar_link"><a href="#">Idea</a>
+                            <ul class="sub-menu">
+                                <li><a href="#">Idea 1.1</a></li>
+                                <li><a href="#">Idea 1.2</a></li>
+                                <li><a href="#">Idea 1.3</a></li>
+                                <li><a href="#">Idea 1.4</a></li>
+                                <li><a href="#">Idea 1.5</a></li>
+                            </ul>
+                        </li>
+                        <li class="navbar_link"><a href="#">Talk</a>
+                            <ul class="sub-menu">
+                                <li><a href="#">Talk 1.1</a></li>
+                                <li><a href="#">Talk 1.2</a></li>
+                                <li><a href="#">Talk 1.3</a></li>
+                                <li><a href="#">Talk 1.4</a></li>
+                                <li><a href="#">Talk 1.5</a></li>
+                            </ul>
+                        </li>
+                        <li class="navbar_link"><a href="#">Comedy</a>
+                            <ul class="sub-menu">
+                                <li><a href="#">Comedy 1.1</a></li>
+                                <li><a href="#">Comedy 1.2</a></li>
+                                <li><a href="#">Comedy 1.3</a></li>
+                                <li><a href="#">Comedy 1.4</a></li>
+                                <li><a href="#">Comedy 1.5</a></li>
+                            </ul>
+                        </li>
+                        <button type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                            All <i class="fa-solid fa-bars"></i>
+                        </button>
+                        <div class="collapse" id="collapseExample">
+                            <div class="collapse-content">
+                                <div class="row col-md-12 all-category">
+                                    <div class="col-md-11"><p>Tất cả chuyên mục</p></div>
+                                    <div class="col-md-1"><a href="#" data-toggle="collapse" data-target="#collapseExample"><i class="fa-solid fa-xmark"></i></a></div>
+                                </div>
+                                <div class="row col-md-12">
+                                    <div class="col-md-10 list-item-left">
+                                        <div class="row col-md-12 list-icon">
+                                            <div class="col-md-2 ">
+                                                <ul>
+                                                    <li><a style="font-weight: 700;" href="#">Thời sự</a></li>
+                                                    <li><a href="#">Chính trị</a></li>
+                                                    <li><a href="#">Dân sinh</a></li>
+                                                    <li><a href="#">Lao động-Việc làm</a></li>
+                                                    <li><a href="#">Giao thông</a></li>
+                                                    <li><a class="readmore" href="#">Đọc thêm</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <ul>
+                                                    <li><a style="font-weight: 700;" href="#">Góc nhìn</a></li>
+                                                    <li><a href="#">Bình luận nhiều</a></li>
+                                                    <li><a href="#">Chính trị</a></li>
+                                                    <li><a href="#">Y tế & SK</a></li>
+                                                    <li><a href="#">Kinh doanh & quản trị</a></li>
+                                                    <li><a class="readmore" href="#">Đọc thêm</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <ul>
+                                                    <li><a style="font-weight: 700;" href="#">Thế giới</a></li>
+                                                    <li><a href="#">Tư liệu</a></li>
+                                                    <li><a href="#">Phân tích</a></li>
+                                                    <li><a href="#">Người Việt 5 châu</a></li>
+                                                    <li><a href="#">Cuộc sống đó đây</a></li>
+                                                    <li><a class="readmore" href="#">Đọc thêm</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <ul>
+                                                    <li><a style="font-weight: 700;" href="#">Videos</a></li>
+                                                    <li><a href="#">Thời sự</a></li>
+                                                    <li><a href="#">Nhịp sống</a></li>
+                                                    <li><a href="#">Food</a></li>
+                                                    <li><a href="#">Tôi kể</a></li>
+                                                    <li><a class="readmore" href="#">Đọc thêm</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <ul>
+                                                    <li><a style="font-weight: 700;" href="#">Podcasts</a></li>
+                                                    <li><a href="#">VnExpress hn</a></li>
+                                                    <li><a href="#">Họ nói gì?</a></li>
+                                                    <li><a href="#">Hộp đen</a></li>
+                                                    <li><a href="#">Ly hôn</a></li>
+                                                    <li><a class="readmore" href="#">Đọc thêm</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <ul>
+                                                    <li><a style="font-weight: 700;" href="#">Podcasts</a></li>
+                                                    <li><a href="#">VnExpress hn</a></li>
+                                                    <li><a href="#">Họ nói gì?</a></li>
+                                                    <li><a href="#">Hộp đen</a></li>
+                                                    <li><a href="#">Ly hôn</a></li>
+                                                    <li><a class="readmore" href="#">Đọc thêm</a></li>
+                                                </ul>
+                                            </div>
+    
+                                        </div>
+                                        <div class="row col-md-12 list-icon">
+                                            <div class="col-md-2 ">
+                                                <ul>
+                                                    <li><a style="font-weight: 700;" href="#">Thời sự</a></li>
+                                                    <li><a href="#">Chính trị</a></li>
+                                                    <li><a href="#">Dân sinh</a></li>
+                                                    <li><a href="#">Lao động-Việc làm</a></li>
+                                                    <li><a href="#">Giao thông</a></li>
+                                                    <li><a class="readmore" href="#">Đọc thêm</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <ul>
+                                                    <li><a style="font-weight: 700;" href="#">Góc nhìn</a></li>
+                                                    <li><a href="#">Bình luận nhiều</a></li>
+                                                    <li><a href="#">Chính trị</a></li>
+                                                    <li><a href="#">Y tế & SK</a></li>
+                                                    <li><a href="#">Kinh doanh & quản trị</a></li>
+                                                    <li><a class="readmore" href="#">Đọc thêm</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <ul>
+                                                    <li><a style="font-weight: 700;" href="#">Thế giới</a></li>
+                                                    <li><a href="#">Tư liệu</a></li>
+                                                    <li><a href="#">Phân tích</a></li>
+                                                    <li><a href="#">Người Việt 5 châu</a></li>
+                                                    <li><a href="#">Cuộc sống đó đây</a></li>
+                                                    <li><a class="readmore" href="#">Đọc thêm</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <ul>
+                                                    <li><a style="font-weight: 700;" href="#">Videos</a></li>
+                                                    <li><a href="#">Thời sự</a></li>
+                                                    <li><a href="#">Nhịp sống</a></li>
+                                                    <li><a href="#">Food</a></li>
+                                                    <li><a href="#">Tôi kể</a></li>
+                                                    <li><a class="readmore" href="#">Đọc thêm</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <ul>
+                                                    <li><a style="font-weight: 700;" href="#">Podcasts</a></li>
+                                                    <li><a href="#">VnExpress hn</a></li>
+                                                    <li><a href="#">Họ nói gì?</a></li>
+                                                    <li><a href="#">Hộp đen</a></li>
+                                                    <li><a href="#">Ly hôn</a></li>
+                                                    <li><a class="readmore" href="#">Đọc thêm</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <ul>
+                                                    <li><a style="font-weight: 700;" href="#">Podcasts</a></li>
+                                                    <li><a href="#">VnExpress hn</a></li>
+                                                    <li><a href="#">Họ nói gì?</a></li>
+                                                    <li><a href="#">Hộp đen</a></li>
+                                                    <li><a href="#">Ly hôn</a></li>
+                                                    <li><a class="readmore" href="#">Đọc thêm</a></li>
+                                                </ul>
+                                            </div>
+    
+                                        </div>
+                                        <div class="row col-md-12 list-icon">
+                                            <div class="col-md-2 ">
+                                                <ul>
+                                                    <li><a style="font-weight: 700;" href="#">Kinh doanh</a></li>
+                                                    <li><a href="#">Comedy 1.2</a></li>
+                                                    <li><a href="#">Comedy 1.3</a></li>
+                                                    <li><a href="#">Comedy 1.4</a></li>
+                                                    <li><a href="#">Comedy 1.5</a></li>
+                                                    <li><a class="readmore" href="#">Đọc thêm</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <ul>
+                                                    <li><a style="font-weight: 700;" href="#">Thể thao</a></li>
+                                                    <li><a href="#">Comedy 1.2</a></li>
+                                                    <li><a href="#">Comedy 1.3</a></li>
+                                                    <li><a href="#">Comedy 1.4</a></li>
+                                                    <li><a href="#">Comedy 1.5</a></li>
+                                                    <li><a class="readmore" href="#">Đọc thêm</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <ul>
+                                                    <li><a style="font-weight: 700;" href="#">Pháp luật</a></li>
+                                                    <li><a href="#">Comedy 1.2</a></li>
+                                                    <li><a href="#">Comedy 1.3</a></li>
+                                                    <li><a href="#">Comedy 1.4</a></li>
+                                                    <li><a href="#">Comedy 1.5</a></li>
+                                                    <li><a class="readmore" href="#">Đọc thêm</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <ul>
+                                                    <li><a style="font-weight: 700;" href="#">Giáo dục</a></li>
+                                                    <li><a href="#">Comedy 1.2</a></li>
+                                                    <li><a href="#">Comedy 1.3</a></li>
+                                                    <li><a href="#">Comedy 1.4</a></li>
+                                                    <li><a href="#">Comedy 1.5</a></li>
+                                                    <li><a class="readmore" href="#">Đọc thêm</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <ul>
+                                                    <li><a style="font-weight: 700;" href="#">Sức khỏe</a></li>
+                                                    <li><a href="#">Comedy 1.2</a></li>
+                                                    <li><a href="#">Comedy 1.3</a></li>
+                                                    <li><a href="#">Comedy 1.4</a></li>
+                                                    <li><a href="#">Comedy 1.5</a></li>
+                                                    <li><a class="readmore" href="#">Đọc thêm</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 list-item-right">
+                                        <ul>
+                                            <li><a style="font-weight: 700;" href="#">Podcasts</a></li>
+                                            <li><a style="font-weight: 700;" href="#">Ảnh</a></li>
+                                            <li><a style="font-weight: 700;" href="#">Infographics</a></li>
+                                        </ul>
+                                        <ul>
+                                            <li><a style="font-weight: 700;" href="#">Mới nhất</a></li>
+                                            <li><a style="font-weight: 700;" href="#">Xem nhiều</a></li>
+                                            <li><a style="font-weight: 700;" href="#">Tin nóng</a></li>
+                                        </ul>
+                                        <ul>
+                                            <li><a href="#">Giao vặt</a></li>
+                                            <li><a href="#">Start up</a></li>
+                                            <li><a href="#">Mua ảnh Express</a></li>
+                                            <li><a href="#">Home</a></li>
+                                            <li><a href="#">Ebook</a></li>
+                                            <li><a href="#">Ework</a></li>
+                                        </ul>
+                                        <ul>
+                                            <li>Liên hệ</li>
+                                            <li><a href="#"><i class="fa-solid fa-envelope"></i> Tòa soạn</a></li>
+                                            <li><a href="#"><i class="fa-brands fa-edge-legacy"></i> Quảng cáo</a></li>
+                                            <li><a href="#"><i class="fa-solid fa-v"></i> Hợp tác bản quyền</a></li>
+                                        </ul>
+                                        <ul class="dowloadapp">
+                                            <li>Tải ứng dụng</li>
+                                            <li><a href="#"><i class="fa-brands fa-edge"></i> VN Express</a></li>
+                                            <li><a href="#"><i class="fa-brands fa-edge"></i> International</a></li>
+                                        </ul> 
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </ul>
+                </nav>
+            </section>
+        </header>
+        <div class="main-content">
+            <div class="container-content">
+                <div class="content">
+                    <div class="content-des">
+                        <a href="">Giáo dục</a>
+                        <i class="fa-solid fa-angle-right"></i>
+                        <a href="">Tin tức</a>
+                        <span class="date">Thứ ba, 23/8/2022, 10:08 (GMT+7)</span>
+                        <h1 class="title-detail">Gần 450 ứng viên được đề nghị xét giáo sư, phó giáo sư năm 2022</h1>
+                        <p class="description">Năm 2022, có 447 ứng viên được 26 Hội đồng Giáo sư cơ sở đề nghị xét công nhận đạt tiêu chuẩn giáo sư, phó giáo sư, giảm 4 so với năm ngoái.</p>
+                        <article class="fck_detail ">
+                            <p class="Normal">Trong 447 ứng viên do Hội đồng Giáo sư nhà nước công bố ngày 22/8, 51 người được đề nghị công nhận đạt tiêu chuẩn giáo sư và 396 phó giáo sư.</p><p class="Normal">Với 59 ứng viên, ngành Kinh tế đã lấy lại ngôi đầu về số người được đề nghị, soán ngôi của ngành Y học năm ngoái. Trong đó, 53 người được đề nghị phó giáo sư, 6 giáo sư.</p><p class="Normal">Ngành Y học đứng thứ hai với 45 ứng viên phó giáo sư, 8 giáo sư (tổng 53 người). Vị trí thứ ba là Hóa học - Công nghệ thực phẩm với 50 ứng viên: 3 giáo sư và 47 phó giáo sư.</p><p class="Normal">Một số ngành không đề cử giáo sư là Giáo dục học, Văn hóa - Nghệ thuật - Thể dục thể thao, Dược học, Ngôn ngữ học, Văn học, Luyện kim và Tâm lý học. Đây cũng là những ngành có số đề cử phó giáo sư thấp, chỉ 1 đến 15 người.</p><p class="Normal">Hội đồng giáo sư ngành Khoa học quân sự và Khoa học An ninh không công khai ứng viên.</p><div style="text-align:center; width:100%"><div id="chart-4801" data-component="true" data-component-value="4801" class="width_common mb20" data-highcharts-chart="0" style="overflow: hidden;"><div id="highcharts-dpsixab-0" dir="ltr" class="highcharts-container " style="position: relative; overflow: hidden; width: 670px; height: 989px; text-align: left; line-height: normal; z-index: 0; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); font-family: Arial; color: rgb(51, 51, 51); font-size: 12px; font-weight: normal; font-style: normal;"><svg version="1.1" class="highcharts-root" style="font-family:Arial;font-size:12px;color:#333;font-weight:normal;font-style:normal;fill:#333;" xmlns="http://www.w3.org/2000/svg" width="670" height="989" viewBox="0 0 670 989"><desc>Created with Highcharts 8.0.4</desc><defs><clipPath id="highcharts-dpsixab-1-"><rect x="0" y="0" width="852" height="446" fill="none"></rect></clipPath><clipPath id="highcharts-dpsixab-28-"><rect x="0" y="0" width="852" height="446" fill="none"></rect></clipPath></defs><rect fill="#ffffff" class="highcharts-background" x="0" y="0" width="670" height="989" rx="0" ry="0"></rect><rect fill="none" class="highcharts-plot-background" x="214" y="46" width="446" height="852"></rect><g class="highcharts-pane-group" data-z-index="0"></g><g class="highcharts-grid highcharts-xaxis-grid" data-z-index="1"><path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 214 79.5 L 660 79.5" opacity="1"></path><path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 214 112.5 L 660 112.5" opacity="1"></path><path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 214 144.5 L 660 144.5" opacity="1"></path><path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 214 177.5 L 660 177.5" opacity="1"></path><path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 214 210.5 L 660 210.5" opacity="1"></path><path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 214 243.5 L 660 243.5" opacity="1"></path><path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 214 275.5 L 660 275.5" opacity="1"></path><path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 214 308.5 L 660 308.5" opacity="1"></path><path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 214 341.5 L 660 341.5" opacity="1"></path><path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 214 374.5 L 660 374.5" opacity="1"></path><path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 214 406.5 L 660 406.5" opacity="1"></path><path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 214 439.5 L 660 439.5" opacity="1"></path><path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 214 472.5 L 660 472.5" opacity="1"></path><path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 214 505.5 L 660 505.5" opacity="1"></path><path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 214 538.5 L 660 538.5" opacity="1"></path><path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 214 570.5 L 660 570.5" opacity="1"></path><path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 214 603.5 L 660 603.5" opacity="1"></path><path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 214 636.5 L 660 636.5" opacity="1"></path><path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 214 669.5 L 660 669.5" opacity="1"></path><path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 214 701.5 L 660 701.5" opacity="1"></path><path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 214 734.5 L 660 734.5" opacity="1"></path><path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 214 767.5 L 660 767.5" opacity="1"></path><path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 214 800.5 L 660 800.5" opacity="1"></path><path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 214 832.5 L 660 832.5" opacity="1"></path><path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 214 865.5 L 660 865.5" opacity="1"></path><path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 214 898.5 L 660 898.5" opacity="1"></path><path fill="none" data-z-index="1" class="highcharts-grid-line" d="M 214 46.5 L 660 46.5" opacity="1"></path></g><g class="highcharts-grid highcharts-yaxis-grid" data-z-index="1"><path fill="none" stroke="#e6e6e6" stroke-width="1" data-z-index="1" class="highcharts-grid-line" d="M 213.5 46 L 213.5 898" opacity="1"></path><path fill="none" stroke="#e6e6e6" stroke-width="1" data-z-index="1" class="highcharts-grid-line" d="M 340.5 46 L 340.5 898" opacity="1"></path><path fill="none" stroke="#e6e6e6" stroke-width="1" data-z-index="1" class="highcharts-grid-line" d="M 468.5 46 L 468.5 898" opacity="1"></path><path fill="none" stroke="#e6e6e6" stroke-width="1" data-z-index="1" class="highcharts-grid-line" d="M 595.5 46 L 595.5 898" opacity="1"></path><path fill="none" stroke="#e6e6e6" stroke-width="1" data-z-index="1" class="highcharts-grid-line" d="M 277.5 46 L 277.5 898" opacity="1"></path><path fill="none" stroke="#e6e6e6" stroke-width="1" data-z-index="1" class="highcharts-grid-line" d="M 404.5 46 L 404.5 898" opacity="1"></path><path fill="none" stroke="#e6e6e6" stroke-width="1" data-z-index="1" class="highcharts-grid-line" d="M 532.5 46 L 532.5 898" opacity="1"></path><path fill="none" stroke="#e6e6e6" stroke-width="1" data-z-index="1" class="highcharts-grid-line" d="M 660.5 46 L 660.5 898" opacity="1"></path></g><rect fill="none" class="highcharts-plot-border" data-z-index="1" x="214" y="46" width="446" height="852"></rect><g class="highcharts-axis highcharts-xaxis" data-z-index="2"><path fill="none" class="highcharts-axis-line" stroke="#ccd6eb" stroke-width="1" data-z-index="7" d="M 213.5 46 L 213.5 898"></path></g><g class="highcharts-axis highcharts-yaxis" data-z-index="2"><text x="437" data-z-index="7" text-anchor="middle" transform="translate(0,0)" class="highcharts-axis-title" style="color:#666666;fill:#666666;" y="935"><tspan>Values</tspan></text><path fill="none" class="highcharts-axis-line" data-z-index="7" d="M 214 898 L 660 898"></path></g><g class="highcharts-series-group" data-z-index="3"><g data-z-index="0.1" class="highcharts-series highcharts-series-0 highcharts-column-series highcharts-color-0 highcharts-tracker" transform="translate(660,898) rotate(90) scale(-1,1) scale(1 1)" clip-path="url(#highcharts-dpsixab-28-)" width="446" height="852" opacity="1"><rect x="827.5" y="70.5" width="16" height="38" fill="#81d4fa" stroke="#ffffff" stroke-width="1" opacity="1" class="highcharts-point highcharts-color-0"></rect><rect x="794.5" y="108.5" width="16" height="51" fill="#81d4fa" stroke="#ffffff" stroke-width="1" opacity="1" class="highcharts-point highcharts-color-0"></rect><rect x="761.5" y="127.5" width="16" height="20" fill="rgb(129,212,250)" stroke="#ffffff" stroke-width="1" opacity="1" class="highcharts-point highcharts-color-0"></rect><rect x="728.5" y="287.5" width="16" height="6" fill="#81d4fa" stroke="#ffffff" stroke-width="1" opacity="1" class="highcharts-point highcharts-color-0"></rect><rect x="696.5" y="287.5" width="16" height="12" fill="#81d4fa" stroke="#ffffff" stroke-width="1" opacity="1" class="highcharts-point highcharts-color-0"></rect><rect x="663.5" y="274.5" width="16" height="38" fill="rgb(129,212,250)" stroke="#ffffff" stroke-width="1" opacity="1" class="highcharts-point highcharts-color-0"></rect><rect x="630.5" y="306.5" width="16" height="19" fill="#81d4fa" stroke="#ffffff" stroke-width="1" opacity="1" class="highcharts-point highcharts-color-0"></rect><rect x="597.5" y="319.5" width="16" height="6" fill="#81d4fa" stroke="#ffffff" stroke-width="1" opacity="1" class="highcharts-point highcharts-color-0"></rect><rect x="565.5" y="325.5" width="16" height="13" fill="#81d4fa" stroke="#ffffff" stroke-width="1" opacity="1" class="highcharts-point highcharts-color-0"></rect><rect x="532.5" y="338.5" width="16" height="12" fill="#81d4fa" stroke="#ffffff" stroke-width="1" opacity="1" class="highcharts-point highcharts-color-0"></rect><rect x="499.5" y="350.5" width="16" height="0" fill="#81d4fa" stroke="#ffffff" stroke-width="1" opacity="1" class="highcharts-point highcharts-color-0"></rect><rect x="466.5" y="338.5" width="16" height="12" fill="#81d4fa" stroke="#ffffff" stroke-width="1" opacity="1" class="highcharts-point highcharts-color-0"></rect><rect x="434.5" y="350.5" width="16" height="0" fill="#81d4fa" stroke="#ffffff" stroke-width="1" opacity="1" class="highcharts-point highcharts-color-0"></rect><rect x="401.5" y="331.5" width="16" height="32" fill="#81d4fa" stroke="#ffffff" stroke-width="1" opacity="1" class="highcharts-point highcharts-color-0"></rect><rect x="368.5" y="350.5" width="16" height="20" fill="#81d4fa" stroke="#ffffff" stroke-width="1" opacity="1" class="highcharts-point highcharts-color-0"></rect><rect x="335.5" y="389.5" width="16" height="0" fill="#81d4fa" stroke="#ffffff" stroke-width="1" opacity="1" class="highcharts-point highcharts-color-0"></rect><rect x="302.5" y="395.5" width="16" height="6" fill="#81d4fa" stroke="#ffffff" stroke-width="1" opacity="1" class="highcharts-point highcharts-color-0"></rect><rect x="270.5" y="395.5" width="16" height="13" fill="#81d4fa" stroke="#ffffff" stroke-width="1" opacity="1" class="highcharts-point highcharts-color-0"></rect><rect x="237.5" y="408.5" width="16" height="6" fill="#81d4fa" stroke="#ffffff" stroke-width="1" opacity="1" class="highcharts-point highcharts-color-0"></rect><rect x="204.5" y="421.5" width="16" height="0" fill="#81d4fa" stroke="#ffffff" stroke-width="1" opacity="1" class="highcharts-point highcharts-color-0"></rect><rect x="171.5" y="414.5" width="16" height="13" fill="#81d4fa" stroke="#ffffff" stroke-width="1" opacity="1" class="highcharts-point highcharts-color-0"></rect><rect x="139.5" y="427.5" width="16" height="0" fill="#81d4fa" stroke="#ffffff" stroke-width="1" opacity="1" class="highcharts-point highcharts-color-0"></rect><rect x="106.5" y="427.5" width="16" height="0" fill="#81d4fa" stroke="#ffffff" stroke-width="1" opacity="1" class="highcharts-point highcharts-color-0"></rect><rect x="73.5" y="440.5" width="16" height="0" fill="#81d4fa" stroke="#ffffff" stroke-width="1" opacity="1" class="highcharts-point highcharts-color-0"></rect><rect x="40.5" y="433.5" width="16" height="7" fill="#81d4fa" stroke="#ffffff" stroke-width="1" opacity="1" class="highcharts-point highcharts-color-0"></rect><rect x="8.5" y="440.5" width="16" height="0" fill="#81d4fa" stroke="#ffffff" stroke-width="1" opacity="1" class="highcharts-point highcharts-color-0"></rect></g><g data-z-index="0.1" class="highcharts-markers highcharts-series-0 highcharts-column-series highcharts-color-0" transform="translate(660,898) rotate(90) scale(-1,1) scale(1 1)" clip-path="none" opacity="1"></g><g data-z-index="0.1" class="highcharts-series highcharts-series-1 highcharts-column-series highcharts-color-1 highcharts-tracker" transform="translate(660,898) rotate(90) scale(-1,1) scale(1 1)" clip-path="url(#highcharts-dpsixab-28-)" width="446" height="852" opacity="1"><rect x="827.5" y="108.5" width="16" height="338" fill="rgb(2,119,189)" stroke="#ffffff" stroke-width="1" opacity="1" class="highcharts-point highcharts-color-1"></rect><rect x="794.5" y="159.5" width="16" height="287" fill="#0277bd" stroke="#ffffff" stroke-width="1" opacity="1" class="highcharts-point highcharts-color-1"></rect><rect x="761.5" y="147.5" width="16" height="299" fill="rgb(2,119,189)" stroke="#ffffff" stroke-width="1" opacity="1" class="highcharts-point highcharts-color-1"></rect><rect x="728.5" y="293.5" width="16" height="153" fill="#0277bd" stroke="#ffffff" stroke-width="1" opacity="1" class="highcharts-point highcharts-color-1"></rect><rect x="696.5" y="299.5" width="16" height="147" fill="rgb(2,119,189)" stroke="#ffffff" stroke-width="1" opacity="1" class="highcharts-point highcharts-color-1"></rect><rect x="663.5" y="312.5" width="16" height="134" fill="#0277bd" stroke="#ffffff" stroke-width="1" opacity="1" class="highcharts-point highcharts-color-1"></rect><rect x="630.5" y="325.5" width="16" height="121" fill="rgb(2,119,189)" stroke="#ffffff" stroke-width="1" opacity="1" class="highcharts-point highcharts-color-1"></rect><rect x="597.5" y="325.5" width="16" height="121" fill="rgb(2,119,189)" stroke="#ffffff" stroke-width="1" opacity="1" class="highcharts-point highcharts-color-1"></rect><rect x="565.5" y="338.5" width="16" height="108" fill="rgb(2,119,189)" stroke="#ffffff" stroke-width="1" opacity="1" class="highcharts-point highcharts-color-1"></rect><rect x="532.5" y="350.5" width="16" height="96" fill="#0277bd" stroke="#ffffff" stroke-width="1" opacity="1" class="highcharts-point highcharts-color-1"></rect><rect x="499.5" y="350.5" width="16" height="96" fill="#0277bd" stroke="#ffffff" stroke-width="1" opacity="1" class="highcharts-point highcharts-color-1"></rect><rect x="466.5" y="350.5" width="16" height="96" fill="#0277bd" stroke="#ffffff" stroke-width="1" opacity="1" class="highcharts-point highcharts-color-1"></rect><rect x="434.5" y="350.5" width="16" height="96" fill="#0277bd" stroke="#ffffff" stroke-width="1" opacity="1" class="highcharts-point highcharts-color-1"></rect><rect x="401.5" y="363.5" width="16" height="83" fill="#0277bd" stroke="#ffffff" stroke-width="1" opacity="1" class="highcharts-point highcharts-color-1"></rect><rect x="368.5" y="370.5" width="16" height="76" fill="rgb(2,119,189)" stroke="#ffffff" stroke-width="1" opacity="1" class="highcharts-point highcharts-color-1"></rect><rect x="335.5" y="389.5" width="16" height="57" fill="#0277bd" stroke="#ffffff" stroke-width="1" opacity="1" class="highcharts-point highcharts-color-1"></rect><rect x="302.5" y="401.5" width="16" height="45" fill="#0277bd" stroke="#ffffff" stroke-width="1" opacity="1" class="highcharts-point highcharts-color-1"></rect><rect x="270.5" y="408.5" width="16" height="38" fill="#0277bd" stroke="#ffffff" stroke-width="1" opacity="1" class="highcharts-point highcharts-color-1"></rect><rect x="237.5" y="414.5" width="16" height="32" fill="#0277bd" stroke="#ffffff" stroke-width="1" opacity="1" class="highcharts-point highcharts-color-1"></rect><rect x="204.5" y="421.5" width="16" height="25" fill="#0277bd" stroke="#ffffff" stroke-width="1" opacity="1" class="highcharts-point highcharts-color-1"></rect><rect x="171.5" y="427.5" width="16" height="19" fill="#0277bd" stroke="#ffffff" stroke-width="1" opacity="1" class="highcharts-point highcharts-color-1"></rect><rect x="139.5" y="427.5" width="16" height="19" fill="#0277bd" stroke="#ffffff" stroke-width="1" opacity="1" class="highcharts-point highcharts-color-1"></rect><rect x="106.5" y="427.5" width="16" height="19" fill="#0277bd" stroke="#ffffff" stroke-width="1" opacity="1" class="highcharts-point highcharts-color-1"></rect><rect x="73.5" y="440.5" width="16" height="6" fill="#0277bd" stroke="#ffffff" stroke-width="1" opacity="1" class="highcharts-point highcharts-color-1"></rect><rect x="40.5" y="440.5" width="16" height="6" fill="#0277bd" stroke="#ffffff" stroke-width="1" opacity="1" class="highcharts-point highcharts-color-1"></rect><rect x="8.5" y="440.5" width="16" height="6" fill="#0277bd" stroke="#ffffff" stroke-width="1" opacity="1" class="highcharts-point highcharts-color-1"></rect></g><g data-z-index="0.1" class="highcharts-markers highcharts-series-1 highcharts-column-series highcharts-color-1" transform="translate(660,898) rotate(90) scale(-1,1) scale(1 1)" clip-path="none" opacity="1"></g></g><text x="335" text-anchor="middle" class="highcharts-title" data-z-index="4" style="color:#333333;font-size:18px;font-family:Arial;fill:#333333;" y="24"><tspan>Số ứng viên được đề nghị xét giáo sư, phó giáo sư 2022</tspan></text><text x="335" text-anchor="middle" class="highcharts-subtitle" data-z-index="4" style="color:#666666;font-family:Arial;font-size:12px;fill:#666666;" y="45"></text><text x="10" text-anchor="start" class="highcharts-caption" data-z-index="4" style="color:#666666;fill:#666666;" y="986"></text><g data-z-index="6" class="highcharts-data-labels highcharts-series-0 highcharts-column-series highcharts-color-0 highcharts-tracker" transform="translate(214,46) scale(1 1)" opacity="1"><g class="highcharts-label highcharts-data-label highcharts-data-label-color-0" data-z-index="1" transform="translate(348,6)"><text x="5" data-z-index="1" style="font-size:11px;font-weight:bold;color:#000000;fill:#000000;" y="16"><tspan x="5" y="16" class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round">6</tspan><tspan x="5" y="16">6</tspan></text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-0" data-z-index="1" transform="translate(304,39)"><text x="5" data-z-index="1" style="font-size:11px;font-weight:bold;color:#000000;fill:#000000;" y="16"><tspan x="5" y="16" class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round">8</tspan><tspan x="5" y="16">8</tspan></text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-0" data-z-index="1" transform="translate(300,72)"><text x="5" data-z-index="1" style="font-size:11px;font-weight:bold;color:#000000;fill:#000000;" y="16"><tspan x="5" y="16" class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round">3</tspan><tspan x="5" y="16">3</tspan></text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-0" data-z-index="1" transform="translate(147,105)"><text x="5" data-z-index="1" style="font-size:11px;font-weight:bold;color:#000000;fill:#000000;" y="16"><tspan x="5" y="16" class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round">1</tspan><tspan x="5" y="16">1</tspan></text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-0" data-z-index="1" transform="translate(144,137)"><text x="5" data-z-index="1" style="font-size:11px;font-weight:bold;color:#000000;fill:#000000;" y="16"><tspan x="5" y="16" class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round">2</tspan><tspan x="5" y="16">2</tspan></text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-0" data-z-index="1" transform="translate(144,170)"><text x="5" data-z-index="1" style="font-size:11px;font-weight:bold;color:#000000;fill:#000000;" y="16"><tspan x="5" y="16" class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round">6</tspan><tspan x="5" y="16">6</tspan></text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-0" data-z-index="1" transform="translate(122,203)"><text x="5" data-z-index="1" style="font-size:11px;font-weight:bold;color:#000000;fill:#000000;" y="16"><tspan x="5" y="16" class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round">3</tspan><tspan x="5" y="16">3</tspan></text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-0" data-z-index="1" transform="translate(115,236)"><text x="5" data-z-index="1" style="font-size:11px;font-weight:bold;color:#000000;fill:#000000;" y="16"><tspan x="5" y="16" class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round">1</tspan><tspan x="5" y="16">1</tspan></text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-0" data-z-index="1" transform="translate(106,268)"><text x="5" data-z-index="1" style="font-size:11px;font-weight:bold;color:#000000;fill:#000000;" y="16"><tspan x="5" y="16" class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round">2</tspan><tspan x="5" y="16">2</tspan></text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-0" data-z-index="1" transform="translate(93,301)"><text x="5" data-z-index="1" style="font-size:11px;font-weight:bold;color:#000000;fill:#000000;" y="16"><tspan x="5" y="16" class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round">2</tspan><tspan x="5" y="16">2</tspan></text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-0" data-z-index="1" transform="translate(87,334)"><text x="5" data-z-index="1" style="font-size:11px;font-weight:bold;color:#000000;fill:#000000;" y="16"><tspan x="5" y="16" class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round">0</tspan><tspan x="5" y="16">0</tspan></text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-0" data-z-index="1" transform="translate(93,367)"><text x="5" data-z-index="1" style="font-size:11px;font-weight:bold;color:#000000;fill:#000000;" y="16"><tspan x="5" y="16" class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round">2</tspan><tspan x="5" y="16">2</tspan></text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-0" data-z-index="1" transform="translate(87,399)"><text x="5" data-z-index="1" style="font-size:11px;font-weight:bold;color:#000000;fill:#000000;" y="16"><tspan x="5" y="16" class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round">0</tspan><tspan x="5" y="16">0</tspan></text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-0" data-z-index="1" transform="translate(90,432)"><text x="5" data-z-index="1" style="font-size:11px;font-weight:bold;color:#000000;fill:#000000;" y="16"><tspan x="5" y="16" class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round">5</tspan><tspan x="5" y="16">5</tspan></text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-0" data-z-index="1" transform="translate(77,465)"><text x="5" data-z-index="1" style="font-size:11px;font-weight:bold;color:#000000;fill:#000000;" y="16"><tspan x="5" y="16" class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round">3</tspan><tspan x="5" y="16">3</tspan></text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-0" data-z-index="1" transform="translate(48,498)"><text x="5" data-z-index="1" style="font-size:11px;font-weight:bold;color:#000000;fill:#000000;" y="16"><tspan x="5" y="16" class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round">0</tspan><tspan x="5" y="16">0</tspan></text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-0" data-z-index="1" transform="translate(39,531)"><text x="5" data-z-index="1" style="font-size:11px;font-weight:bold;color:#000000;fill:#000000;" y="16"><tspan x="5" y="16" class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round">1</tspan><tspan x="5" y="16">1</tspan></text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-0" data-z-index="1" transform="translate(36,563)"><text x="5" data-z-index="1" style="font-size:11px;font-weight:bold;color:#000000;fill:#000000;" y="16"><tspan x="5" y="16" class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round">2</tspan><tspan x="5" y="16">2</tspan></text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-0" data-z-index="1" transform="translate(26,596)"><text x="5" data-z-index="1" style="font-size:11px;font-weight:bold;color:#000000;fill:#000000;" y="16"><tspan x="5" y="16" class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round">1</tspan><tspan x="5" y="16">1</tspan></text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-0" data-z-index="1" transform="translate(16,629)" opacity="1"><text x="5" data-z-index="1" style="font-size:11px;font-weight:bold;color:#000000;fill:#000000;" y="16"><tspan x="5" y="16" class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round">0</tspan><tspan x="5" y="16">0</tspan></text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-0" data-z-index="1" transform="translate(17,662)"><text x="5" data-z-index="1" style="font-size:11px;font-weight:bold;color:#000000;fill:#000000;" y="16"><tspan x="5" y="16" class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round">2</tspan><tspan x="5" y="16">2</tspan></text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-0" data-z-index="1" transform="translate(10,694)" opacity="1"><text x="5" data-z-index="1" style="font-size:11px;font-weight:bold;color:#000000;fill:#000000;" y="16"><tspan x="5" y="16" class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round">0</tspan><tspan x="5" y="16">0</tspan></text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-0" data-z-index="1" transform="translate(10,727)" opacity="1"><text x="5" data-z-index="1" style="font-size:11px;font-weight:bold;color:#000000;fill:#000000;" y="16"><tspan x="5" y="16" class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round">0</tspan><tspan x="5" y="16">0</tspan></text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-0" data-z-index="1" transform="translate(-3,760)" opacity="0"><text x="5" data-z-index="1" style="font-size:11px;font-weight:bold;color:#000000;fill:#000000;" y="16"><tspan x="5" y="16" class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round">0</tspan><tspan x="5" y="16">0</tspan></text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-0" data-z-index="1" transform="translate(1,793)"><text x="5" data-z-index="1" style="font-size:11px;font-weight:bold;color:#000000;fill:#000000;" y="16"><tspan x="5" y="16" class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round">1</tspan><tspan x="5" y="16">1</tspan></text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-0" data-z-index="1" transform="translate(-3,825)" opacity="0"><text x="5" data-z-index="1" style="font-size:11px;font-weight:bold;color:#000000;fill:#000000;" y="16"><tspan x="5" y="16" class="highcharts-text-outline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2px" stroke-linejoin="round">0</tspan><tspan x="5" y="16">0</tspan></text></g></g><g data-z-index="6" class="highcharts-data-labels highcharts-series-1 highcharts-column-series highcharts-color-1 highcharts-tracker" transform="translate(214,46) scale(1 1)" opacity="1"><g class="highcharts-label highcharts-data-label highcharts-data-label-color-1" data-z-index="1" transform="translate(157,6)"><text x="5" data-z-index="1" style="font-size:11px;font-weight:bold;color:#FFFFFF;fill:#FFFFFF;" y="16"><tspan x="5" y="16" class="highcharts-text-outline" fill="#000000" stroke="#000000" stroke-width="2px" stroke-linejoin="round">53</tspan><tspan x="5" y="16">53</tspan></text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-1" data-z-index="1" transform="translate(132,39)"><text x="5" data-z-index="1" style="font-size:11px;font-weight:bold;color:#FFFFFF;fill:#FFFFFF;" y="16"><tspan x="5" y="16" class="highcharts-text-outline" fill="#000000" stroke="#000000" stroke-width="2px" stroke-linejoin="round">45</tspan><tspan x="5" y="16">45</tspan></text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-1" data-z-index="1" transform="translate(138,72)"><text x="5" data-z-index="1" style="font-size:11px;font-weight:bold;color:#FFFFFF;fill:#FFFFFF;" y="16"><tspan x="5" y="16" class="highcharts-text-outline" fill="#000000" stroke="#000000" stroke-width="2px" stroke-linejoin="round">47</tspan><tspan x="5" y="16">47</tspan></text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-1" data-z-index="1" transform="translate(65,105)"><text x="5" data-z-index="1" style="font-size:11px;font-weight:bold;color:#FFFFFF;fill:#FFFFFF;" y="16"><tspan x="5" y="16" class="highcharts-text-outline" fill="#000000" stroke="#000000" stroke-width="2px" stroke-linejoin="round">24</tspan><tspan x="5" y="16">24</tspan></text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-1" data-z-index="1" transform="translate(62,137)"><text x="5" data-z-index="1" style="font-size:11px;font-weight:bold;color:#FFFFFF;fill:#FFFFFF;" y="16"><tspan x="5" y="16" class="highcharts-text-outline" fill="#000000" stroke="#000000" stroke-width="2px" stroke-linejoin="round">23</tspan><tspan x="5" y="16">23</tspan></text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-1" data-z-index="1" transform="translate(55,170)"><text x="5" data-z-index="1" style="font-size:11px;font-weight:bold;color:#FFFFFF;fill:#FFFFFF;" y="16"><tspan x="5" y="16" class="highcharts-text-outline" fill="#000000" stroke="#000000" stroke-width="2px" stroke-linejoin="round">21</tspan><tspan x="5" y="16">21</tspan></text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-1" data-z-index="1" transform="translate(49,203)"><text x="5" data-z-index="1" style="font-size:11px;font-weight:bold;color:#FFFFFF;fill:#FFFFFF;" y="16"><tspan x="5" y="16" class="highcharts-text-outline" fill="#000000" stroke="#000000" stroke-width="2px" stroke-linejoin="round">19</tspan><tspan x="5" y="16">19</tspan></text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-1" data-z-index="1" transform="translate(49,236)"><text x="5" data-z-index="1" style="font-size:11px;font-weight:bold;color:#FFFFFF;fill:#FFFFFF;" y="16"><tspan x="5" y="16" class="highcharts-text-outline" fill="#000000" stroke="#000000" stroke-width="2px" stroke-linejoin="round">19</tspan><tspan x="5" y="16">19</tspan></text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-1" data-z-index="1" transform="translate(42,268)"><text x="5" data-z-index="1" style="font-size:11px;font-weight:bold;color:#FFFFFF;fill:#FFFFFF;" y="16"><tspan x="5" y="16" class="highcharts-text-outline" fill="#000000" stroke="#000000" stroke-width="2px" stroke-linejoin="round">17</tspan><tspan x="5" y="16">17</tspan></text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-1" data-z-index="1" transform="translate(36,301)"><text x="5" data-z-index="1" style="font-size:11px;font-weight:bold;color:#FFFFFF;fill:#FFFFFF;" y="16"><tspan x="5" y="16" class="highcharts-text-outline" fill="#000000" stroke="#000000" stroke-width="2px" stroke-linejoin="round">15</tspan><tspan x="5" y="16">15</tspan></text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-1" data-z-index="1" transform="translate(36,334)"><text x="5" data-z-index="1" style="font-size:11px;font-weight:bold;color:#FFFFFF;fill:#FFFFFF;" y="16"><tspan x="5" y="16" class="highcharts-text-outline" fill="#000000" stroke="#000000" stroke-width="2px" stroke-linejoin="round">15</tspan><tspan x="5" y="16">15</tspan></text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-1" data-z-index="1" transform="translate(36,367)"><text x="5" data-z-index="1" style="font-size:11px;font-weight:bold;color:#FFFFFF;fill:#FFFFFF;" y="16"><tspan x="5" y="16" class="highcharts-text-outline" fill="#000000" stroke="#000000" stroke-width="2px" stroke-linejoin="round">15</tspan><tspan x="5" y="16">15</tspan></text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-1" data-z-index="1" transform="translate(36,399)"><text x="5" data-z-index="1" style="font-size:11px;font-weight:bold;color:#FFFFFF;fill:#FFFFFF;" y="16"><tspan x="5" y="16" class="highcharts-text-outline" fill="#000000" stroke="#000000" stroke-width="2px" stroke-linejoin="round">15</tspan><tspan x="5" y="16">15</tspan></text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-1" data-z-index="1" transform="translate(30,432)"><text x="5" data-z-index="1" style="font-size:11px;font-weight:bold;color:#FFFFFF;fill:#FFFFFF;" y="16"><tspan x="5" y="16" class="highcharts-text-outline" fill="#000000" stroke="#000000" stroke-width="2px" stroke-linejoin="round">13</tspan><tspan x="5" y="16">13</tspan></text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-1" data-z-index="1" transform="translate(26,465)"><text x="5" data-z-index="1" style="font-size:11px;font-weight:bold;color:#FFFFFF;fill:#FFFFFF;" y="16"><tspan x="5" y="16" class="highcharts-text-outline" fill="#000000" stroke="#000000" stroke-width="2px" stroke-linejoin="round">12</tspan><tspan x="5" y="16">12</tspan></text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-1" data-z-index="1" transform="translate(20,498)"><text x="5" data-z-index="1" style="font-size:11px;font-weight:bold;color:#FFFFFF;fill:#FFFFFF;" y="16"><tspan x="5" y="16" class="highcharts-text-outline" fill="#000000" stroke="#000000" stroke-width="2px" stroke-linejoin="round">9</tspan><tspan x="5" y="16">9</tspan></text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-1" data-z-index="1" transform="translate(14,531)"><text x="5" data-z-index="1" style="font-size:11px;font-weight:bold;color:#FFFFFF;fill:#FFFFFF;" y="16"><tspan x="5" y="16" class="highcharts-text-outline" fill="#000000" stroke="#000000" stroke-width="2px" stroke-linejoin="round">7</tspan><tspan x="5" y="16">7</tspan></text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-1" data-z-index="1" transform="translate(11,563)"><text x="5" data-z-index="1" style="font-size:11px;font-weight:bold;color:#FFFFFF;fill:#FFFFFF;" y="16"><tspan x="5" y="16" class="highcharts-text-outline" fill="#000000" stroke="#000000" stroke-width="2px" stroke-linejoin="round">6</tspan><tspan x="5" y="16">6</tspan></text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-1" data-z-index="1" transform="translate(8,596)"><text x="5" data-z-index="1" style="font-size:11px;font-weight:bold;color:#FFFFFF;fill:#FFFFFF;" y="16"><tspan x="5" y="16" class="highcharts-text-outline" fill="#000000" stroke="#000000" stroke-width="2px" stroke-linejoin="round">5</tspan><tspan x="5" y="16">5</tspan></text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-1" data-z-index="1" transform="translate(4,629)"><text x="5" data-z-index="1" style="font-size:11px;font-weight:bold;color:#FFFFFF;fill:#FFFFFF;" y="16"><tspan x="5" y="16" class="highcharts-text-outline" fill="#000000" stroke="#000000" stroke-width="2px" stroke-linejoin="round">4</tspan><tspan x="5" y="16">4</tspan></text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-1" data-z-index="1" transform="translate(1,662)"><text x="5" data-z-index="1" style="font-size:11px;font-weight:bold;color:#FFFFFF;fill:#FFFFFF;" y="16"><tspan x="5" y="16" class="highcharts-text-outline" fill="#000000" stroke="#000000" stroke-width="2px" stroke-linejoin="round">3</tspan><tspan x="5" y="16">3</tspan></text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-1" data-z-index="1" transform="translate(1,694)"><text x="5" data-z-index="1" style="font-size:11px;font-weight:bold;color:#FFFFFF;fill:#FFFFFF;" y="16"><tspan x="5" y="16" class="highcharts-text-outline" fill="#000000" stroke="#000000" stroke-width="2px" stroke-linejoin="round">3</tspan><tspan x="5" y="16">3</tspan></text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-1" data-z-index="1" transform="translate(1,727)"><text x="5" data-z-index="1" style="font-size:11px;font-weight:bold;color:#FFFFFF;fill:#FFFFFF;" y="16"><tspan x="5" y="16" class="highcharts-text-outline" fill="#000000" stroke="#000000" stroke-width="2px" stroke-linejoin="round">3</tspan><tspan x="5" y="16">3</tspan></text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-1" data-z-index="1" transform="translate(-5,760)"><text x="5" data-z-index="1" style="font-size:11px;font-weight:bold;color:#FFFFFF;fill:#FFFFFF;" y="16"><tspan x="5" y="16" class="highcharts-text-outline" fill="#000000" stroke="#000000" stroke-width="2px" stroke-linejoin="round">1</tspan><tspan x="5" y="16">1</tspan></text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-1" data-z-index="1" transform="translate(-5,-9999)" opacity="0"><text x="5" data-z-index="1" style="font-size:11px;font-weight:bold;color:#FFFFFF;fill:#FFFFFF;" y="16"><tspan x="5" y="16" class="highcharts-text-outline" fill="#000000" stroke="#000000" stroke-width="2px" stroke-linejoin="round">1</tspan><tspan x="5" y="16">1</tspan></text></g><g class="highcharts-label highcharts-data-label highcharts-data-label-color-1" data-z-index="1" transform="translate(-5,825)"><text x="5" data-z-index="1" style="font-size:11px;font-weight:bold;color:#FFFFFF;fill:#FFFFFF;" y="16"><tspan x="5" y="16" class="highcharts-text-outline" fill="#000000" stroke="#000000" stroke-width="2px" stroke-linejoin="round">1</tspan><tspan x="5" y="16">1</tspan></text></g></g><g class="highcharts-legend" data-z-index="7" transform="translate(238,949)"><rect fill="none" class="highcharts-legend-box" rx="0" ry="0" x="0" y="0" width="194" height="25" visibility="visible"></rect><g data-z-index="1"><g><g class="highcharts-legend-item highcharts-column-series highcharts-color-0 highcharts-series-0" data-z-index="1" transform="translate(8,3)"><text x="21" style="color:#333333;cursor:pointer;font-size:12px;font-weight:bold;fill:#333333;" text-anchor="start" data-z-index="2" y="15"><tspan>Giáo sư</tspan></text><rect x="2" y="4" width="12" height="12" fill="#81d4fa" rx="6" ry="6" class="highcharts-point" data-z-index="3"></rect></g><g class="highcharts-legend-item highcharts-column-series highcharts-color-1 highcharts-series-1" data-z-index="1" transform="translate(95.27968978881836,3)"><text x="21" y="15" style="color:#333333;cursor:pointer;font-size:12px;font-weight:bold;fill:#333333;" text-anchor="start" data-z-index="2"><tspan>Phó giáo sư</tspan></text><rect x="2" y="4" width="12" height="12" fill="#0277bd" rx="6" ry="6" class="highcharts-point" data-z-index="3"></rect></g></g></g></g><g class="highcharts-axis-labels highcharts-xaxis-labels" data-z-index="7"><text x="199" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0)" y="67" opacity="1"><tspan>Kinh tế</tspan></text><text x="199" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0)" y="100" opacity="1"><tspan>Y học</tspan></text><text x="199" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0)" y="133" opacity="1"><tspan>Hóa học - Công nghệ thực phẩm</tspan></text><text x="199" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0)" y="166" opacity="1"><tspan>Cơ khí - Động lực</tspan></text><text x="199" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0)" y="198" opacity="1"><tspan>Sinh học</tspan></text><text x="199" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0)" y="231" opacity="1"><tspan>Vật lý</tspan></text><text x="199" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0)" y="264" opacity="1"><tspan>Điện-Điện tử-Tự động hóa</tspan></text><text x="199" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0)" y="297" opacity="1"><tspan>Nông nghiệp - Lâm nghiệp</tspan></text><text x="199" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0)" y="330" opacity="1"><tspan>Công nghệ Thông tin</tspan></text><text x="199" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0)" y="362" opacity="1"><tspan>Giao thông Vận tải</tspan></text><text x="199" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0)" y="395" opacity="1"><tspan>Giáo dục học</tspan></text><text x="199" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0)" y="428" opacity="1"><tspan>Toán học</tspan></text><text x="199" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0)" y="460" opacity="1"><tspan>Xây dựng-Kiến trúc</tspan></text><text x="199" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0)" y="493" opacity="1"><tspan>Khoa học Trái đất - Mỏ</tspan></text><text x="199" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0)" y="526" opacity="1"><tspan>Chăn nuôi-Thú y-Thủy sản</tspan></text><text x="199" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0)" y="559" opacity="1"><tspan>Văn hóa-Nghệ thuật-Thể dục Thể thao</tspan></text><text x="199" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0)" y="591" opacity="1"><tspan>Triết học-Xã hội học-Chính trị học</tspan></text><text x="199" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0)" y="624" opacity="1"><tspan>Thủy lợi</tspan></text><text x="199" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0)" y="657" opacity="1"><tspan>Luật học</tspan></text><text x="199" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0)" y="690" opacity="1"><tspan>Dược học</tspan></text><text x="199" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0)" y="723" opacity="1"><tspan>Cơ học</tspan></text><text x="199" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0)" y="756" opacity="1"><tspan>Ngôn ngữ học</tspan></text><text x="199" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0)" y="788" opacity="1"><tspan>Văn học</tspan></text><text x="199" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0)" y="821" opacity="1"><tspan>Luyện kim</tspan></text><text x="199" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0)" y="853" opacity="1"><tspan>Sử học-Khảo cổ học-Dân tộc học</tspan></text><text x="199" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0)" y="887" opacity="1"><tspan>Tâm lý học</tspan></text></g><g class="highcharts-axis-labels highcharts-yaxis-labels" data-z-index="7"><text x="214" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="middle" transform="translate(0,0)" y="917" opacity="1">0</text><text x="341.42857142857" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="middle" transform="translate(0,0)" y="917" opacity="1">20</text><text x="468.85714285714" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="middle" transform="translate(0,0)" y="917" opacity="1">40</text><text x="596.28571428571" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="middle" transform="translate(0,0)" y="917" opacity="1">60</text><text x="277.71428571429" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="middle" transform="translate(0,0)" y="917" opacity="1">10</text><text x="405.14285714286" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="middle" transform="translate(0,0)" y="917" opacity="1">30</text><text x="532.57142857143" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="middle" transform="translate(0,0)" y="917" opacity="1">50</text><text x="653.7411618232727" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="middle" transform="translate(0,0)" y="917" opacity="1">70</text></g><text x="660" class="highcharts-credits" text-anchor="end" data-z-index="8" style="cursor:pointer;color:#999999;fill:#999999;" y="984">VnExpress</text><g class="highcharts-label highcharts-tooltip           highcharts-color-1" style="white-space:nowrap;pointer-events:none;" data-z-index="8" transform="translate(46,-9999)" opacity="0" visibility="visible"><path fill="none" class="highcharts-label-box highcharts-tooltip-box highcharts-shadow" d="M 3.5 0.5 L 159.5 0.5 C 162.5 0.5 162.5 0.5 162.5 3.5 L 162.5 16 168.5 22 162.5 28 162.5 41.5 C 162.5 44.5 162.5 44.5 159.5 44.5 L 3.5 44.5 C 0.5 44.5 0.5 44.5 0.5 41.5 L 0.5 3.5 C 0.5 0.5 0.5 0.5 3.5 0.5" stroke="#000000" stroke-opacity="0.049999999999999996" stroke-width="5" transform="translate(1, 1)"></path><path fill="none" class="highcharts-label-box highcharts-tooltip-box highcharts-shadow" d="M 3.5 0.5 L 159.5 0.5 C 162.5 0.5 162.5 0.5 162.5 3.5 L 162.5 16 168.5 22 162.5 28 162.5 41.5 C 162.5 44.5 162.5 44.5 159.5 44.5 L 3.5 44.5 C 0.5 44.5 0.5 44.5 0.5 41.5 L 0.5 3.5 C 0.5 0.5 0.5 0.5 3.5 0.5" stroke="#000000" stroke-opacity="0.09999999999999999" stroke-width="3" transform="translate(1, 1)"></path><path fill="none" class="highcharts-label-box highcharts-tooltip-box highcharts-shadow" d="M 3.5 0.5 L 159.5 0.5 C 162.5 0.5 162.5 0.5 162.5 3.5 L 162.5 16 168.5 22 162.5 28 162.5 41.5 C 162.5 44.5 162.5 44.5 159.5 44.5 L 3.5 44.5 C 0.5 44.5 0.5 44.5 0.5 41.5 L 0.5 3.5 C 0.5 0.5 0.5 0.5 3.5 0.5" stroke="#000000" stroke-opacity="0.15" stroke-width="1" transform="translate(1, 1)"></path><path fill="rgba(247,247,247,0.85)" class="highcharts-label-box highcharts-tooltip-box" d="M 3.5 0.5 L 159.5 0.5 C 162.5 0.5 162.5 0.5 162.5 3.5 L 162.5 16 168.5 22 162.5 28 162.5 41.5 C 162.5 44.5 162.5 44.5 159.5 44.5 L 3.5 44.5 C 0.5 44.5 0.5 44.5 0.5 41.5 L 0.5 3.5 C 0.5 0.5 0.5 0.5 3.5 0.5" stroke="#0277bd" stroke-width="1"></path><text x="8" data-z-index="1" style="font-size:12px;color:#333333;cursor:default;fill:#333333;" y="20"><tspan style="font-size: 10px">Hóa học - Công nghệ thực phẩm</tspan><tspan style="fill:#0277bd" x="8" dy="15">●</tspan><tspan dx="0"> Phó giáo sư: </tspan><tspan style="font-weight:bold" dx="0">47</tspan></text></g></svg></div></div></div><p class="Normal">Theo quy trình xét công nhận giáo sư, phó giáo sư, các đại học thành lập Hội đồng cơ sở để xét duyệt những ứng viên nộp hồ sơ. Thành viên của Hội đồng sau đó thẩm định hồ sơ, nghe ứng viên trình bày báo cáo khoa học tổng quan, đánh giá về chuyên môn, nghiệp vụ, và kiểm tra năng lực ngoại ngữ. Sau khi thông qua danh sách ứng viên đủ điều kiện, Hội đồng cơ sở báo cáo kết quả lên Hội đồng Nhà nước.</p><p class="Normal">Hội đồng Nhà nước nhận danh sách, giao cho Hội đồng ngành, liên ngành thẩm định và loại những người không đạt. Sau đó, Hội đồng Nhà nước sẽ xem xét và thông qua danh sách đạt tiêu chuẩn được công nhận chức danh.</p><p class="Normal">Thông thường, danh sách giáo sư, phó giáo sư sẽ được công bố vào tháng 11-12 hàng năm.</p><p class="Normal"><strong>Khi được công nhận chức danh, giáo sư, phó giáo sư được hưởng các quyền của nhà giáo theo quy định của Luật Giáo dục</strong>. Cụ thể, giảng viên có chức danh giáo sư, phó giáo sư công tác trong cơ sở giáo dục đại học có thể kéo dài thời gian làm việc kể từ khi đủ tuổi nghỉ hưu để giảng dạy, nghiên cứu khoa học, nếu có đủ sức khỏe và nhu cầu.</p><p class="Normal">Giáo sư, phó giáo sư được ưu tiên trong việc giao đề tài, dự án khoa học - công nghệ, xây dựng các chương trình, đề án phục vụ công tác quản lý và các điều kiện cần thiết khác để hoàn thành nhiệm vụ được giao.</p><p class="Normal">Đối với nhà giáo thuộc biên chế của cơ sở giáo dục đại học công lập, học hàm giáo sư, phó giáo sư đem lại những quyền lợi nhất định trong việc nâng ngạch lương.</p><p class="Normal">Các cơ sở giáo dục đại học ngoài công lập vận dụng quy định đối với nhà giáo thuộc biên chế của cơ sở giáo dục công lập để thực hiện chế độ đãi ngộ phù hợp với nhà giáo là giáo sư, phó giáo sư.</p><p class="Normal">Từ 2019, việc xét công nhận đạt tiêu chuẩn chức danh giáo sư, phó giáo sư được thực hiện theo <a href="https://vnexpress.net/giao-su-phai-co-it-nhat-ba-bai-bao-khoa-hoc-quoc-te-3809790.html" rel="dofollow">Quyết định 37/2018</a> của Thủ tướng với những tiêu chuẩn cao hơn trước đó. Ứng viên bắt buộc phải có "bài báo khoa học quốc tế" thay vì chỉ quy định chung là bài báo hay đề tài nghiên cứu khoa học như trước. Ứng viên giáo sư phải là tác giả chính của ít nhất năm bài báo khoa học quốc tế, phó giáo sư ba bài đăng trên các tạp chí uy tín thuộc danh mục ISI, Scopus hoặc danh mục khác do Hội đồng Nhà nước quyết định.</p><p class="Normal">Hai năm trước, khi bắt đầu áp dụng tiêu chuẩn mới, số ứng viên đạt chuẩn giáo sư, phó giáo sư giảm. Năm 2019 là 424, năm 2020 là 339 và 2021 là 405, chiếm khoảng 60-70% số được Hội đồng Giáo sư cơ sở đề xuất.</p><p class="Normal" style="text-align:right;"><strong>Thanh Hằng</strong></p>
+                        </article>
+                    </div>
+                    <div class="Relate-post">
+                        <h3>Bài viết liên quan</h3>
+                        <div class="row col-md-12" style="padding-top: 40px;">
+                            <div class="col-md-4"><a class="thumbnail-category-post" href="#"><img style="height: 87;width:185px" src="./assets/images/thumbnail-list.jpg"></a></div>
+                            <div class="col-md-6">
+                                <a href="#" class="title-post">Chứng khoán BOS thay dàn lãnh đạo mới</a>
+                                <a href=""><span>Sau khi hai thành viên cuối cùng của HĐQT xin từ nhiệm, Công ty cổ phần Chứng khoán BOS đã bầu bổ sung 3 nhân sự mới. </span></a>
+                            </div>
+                        </div>
+                        <div class="row col-md-12" style="padding-top: 40px;">
+                            <div class="col-md-4"><a class="thumbnail-category-post" href="#"><img style="height: 87;width:185px" src="./assets/images/thumbnail-list.jpg"></a></div>
+                            <div class="col-md-6">
+                                <a href="#" class="title-post">Chứng khoán BOS thay dàn lãnh đạo mới</a>
+                                <a href=""><span>Sau khi hai thành viên cuối cùng của HĐQT xin từ nhiệm, Công ty cổ phần Chứng khoán BOS đã bầu bổ sung 3 nhân sự mới. </span></a>
+                            </div>
+                        </div>
+                        <div class="row col-md-12" style="padding-top: 40px;">
+                            <div class="col-md-4"><a class="thumbnail-category-post" href="#"><img style="height: 87;width:185px" src="./assets/images/thumbnail-list.jpg"></a></div>
+                            <div class="col-md-6">
+                                <a href="#" class="title-post">Chứng khoán BOS thay dàn lãnh đạo mới</a>
+                                <a href=""><span>Sau khi hai thành viên cuối cùng của HĐQT xin từ nhiệm, Công ty cổ phần Chứng khoán BOS đã bầu bổ sung 3 nhân sự mới. </span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment" style="padding-top: 30px;">
+                        <h4>Ý kiến(Count)</h4>
+                        <form style="margin-top: 20px;" action="">
+                            <textarea id="area" placeholder="Add Your Comment" onkeypress="myFunction()"></textarea>
+                            <div class="btn">
+                                <input type="submit" value="Comment">
+                                <button id="clear">Cancel</button>
+                            </div>
+                           <div class="custom-shows">
+                                <ul>
+                                    <li><a class="show active" href="">Quan tâm nhất</a></li>
+                                    <li><a href="">Mới nhất</a></li>
+                                </ul>
+                           </div>
+                            <div class="commented">
+                                <div class="full-comment">
+                                    <div class="infor">
+                                        <img  src="./assets/images/avatar-login.png" alt="avatar-icon" class="avatar-icon">
+                                    <p class="full_content"><span style="padding-right: 10px;" class="txt-name"><a class="nickname" href="https://my.vnexpress.net/users/feed/1052683573"><b>nghunghau07081984</b></a></span>
+                                        Nói chung là phải có công trình được ứng dụng vào cuộc sống ngoài có bài báo đăng trên tạp chí quốc tế.</p>
+                                    </div>
+                                    <ul>
+                                        <li><a href=""><i class="fa-solid fa-thumbs-up"></i>256</a></li>
+                                        <li><a href="">Trả lời</a></li>
+                                        <li><a href="">Chia sẻ</a></li>
+                                        <li>6h trước</li>
+                                    </ul>
+                                </div>
+                                <div class="full-comment">
+                                    <div class="infor">
+                                        <img  src="./assets/images/avatar-login.png" alt="avatar-icon" class="avatar-icon">
+                                    <p class="full_content"><span style="padding-right: 10px;" class="txt-name"><a class="nickname" href="https://my.vnexpress.net/users/feed/1052683573"><b>nghunghau07081984</b></a></span>
+                                        Nói chung là phải có công trình được ứng dụng vào cuộc sống ngoài có bài báo đăng trên tạp chí quốc tế.</p>
+                                    </div>
+                                    <ul>
+                                        <li><a href=""><i class="fa-solid fa-thumbs-up"></i>256</a></li>
+                                        <li><a href="">Trả lời</a></li>
+                                        <li><a href="">Chia sẻ</a></li>
+                                        <li>6h trước</li>
+                                    </ul>
+                                </div>
+                                <div class="full-comment">
+                                    <div class="infor">
+                                        <img  src="./assets/images/avatar-login.png" alt="avatar-icon" class="avatar-icon">
+                                    <p class="full_content"><span style="padding-right: 10px;" class="txt-name"><a class="nickname" href="https://my.vnexpress.net/users/feed/1052683573"><b>nghunghau07081984</b></a></span>
+                                        Nói chung là phải có công trình được ứng dụng vào cuộc sống ngoài có bài báo đăng trên tạp chí quốc tế.</p>
+                                    </div>
+                                    <ul>
+                                        <li><a href=""><i class="fa-solid fa-thumbs-up"></i>256</a></li>
+                                        <li><a href="">Trả lời</a></li>
+                                        <li><a href="">Chia sẻ</a></li>
+                                        <li>6h trước</li>
+                                    </ul>
+                                </div>
+                                <div class="full-comment">
+                                    <div class="infor">
+                                        <img  src="./assets/images/avatar-login.png" alt="avatar-icon" class="avatar-icon">
+                                    <p class="full_content"><span style="padding-right: 10px;" class="txt-name"><a class="nickname" href="https://my.vnexpress.net/users/feed/1052683573"><b>nghunghau07081984</b></a></span>
+                                        Nói chung là phải có công trình được ứng dụng vào cuộc sống ngoài có bài báo đăng trên tạp chí quốc tế.</p>
+                                    </div>
+                                    <ul>
+                                        <li><a href=""><i class="fa-solid fa-thumbs-up"></i>256</a></li>
+                                        <li><a href="">Trả lời</a></li>
+                                        <li><a href="">Chia sẻ</a></li>
+                                        <li>6h trước</li>
+                                    </ul>
+                                </div>
+                                
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="menu-right">
+                    <a href="#" id="add"><img  src="./assets/images/item.jpg"></a>
+                    <div class="trend">
+                        <a class="content-h2">Xem nhiều</a>
+                        <a class="" href="#"><img src="./assets/images/thumbnail-list.jpg"></a>
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+        <script src="./assets/js/main.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </body>
+</html>
